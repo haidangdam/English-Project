@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sound </title>
+    <script>
+        function rightSound() {
+            alert("You pick the right ");
+            document.getElementById("Button").style.visibility="visible";
+        }
+        function wrongSound() {
+            alert("You pick the wrong song");
+        }
+
+    </script>
+    <style>
+        button.hidden {
+            visibility: hidden
+        }
+        button.visible {
+            visibility: visible
+        }
+
+    </style>
+</head>
+<body>
+    <audio controls>
+        <source src="Soundies_-_Ramblin_Wreck_from_Georgia_Tech.ogg" type="audio/ogg">
+        <source src="Soundies_-_Ramblin_Wreck_from_Georgia_Tech.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <p> </p>
+    <button onClick="rightSound()">Excerpt  </button>
+    <p></p>
+    <audio controls>
+        <source src="uga_fight_song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <p></p>
+    <button onClick="wrongSound()">Excerpt 2</button>
+    <p></p>
+    <audio controls>
+        <source src="the_eyes_of_texas.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <p> </p>
+    <button onClick="wrongSound()">Excerpt 3</button>
+    <p></p>
+
+    <button id="Button" style="visibility:hidden">Click here for next </button>
+</body>
+</html>
